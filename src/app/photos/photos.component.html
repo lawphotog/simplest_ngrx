@@ -1,0 +1,15 @@
+<div class="container" style="padding-top: 20px">
+
+  <h1>photos</h1>
+
+  <div class="card-columns">
+      <div *ngFor="let photo of photos$ | async" class="card">      
+      <div>
+          <h2>a photo</h2>
+          <img [src]="photo.src" class="card-img">      
+      </div>
+      </div>
+  </div>  
+  
+  </div>
+  
