@@ -14,13 +14,12 @@ export class PhotosComponent implements OnInit {
   photos$: Observable<Photo[]>;
 
   constructor(private store: Store<AppState>) {
-    this.photos$ = store.select(store => store.photos);
-    this.photos$.subscribe(console.log);
+    this.photos$ = store.select<Photo[]>(s => s.photosReducer.photos);
+    console.log(store.select<Photo[]>(s => s.photosReducer.photos));
    }
 
   ngOnInit() {
     this.store.dispatch(new fromPhotos.LoadPhotosAction());
-
   }
 
 }

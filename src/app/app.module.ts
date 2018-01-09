@@ -9,7 +9,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { PhotosEffects } from './effects/photos.effect';
-import { reducer } from './reducers/photos.reducer';
+import { photosReducer } from './reducers/photos.reducer';
 import { PhotosComponent } from './photos/photos.component';
 
 @NgModule({
@@ -21,7 +21,7 @@ import { PhotosComponent } from './photos/photos.component';
     BrowserModule,
     AppRoutingModule,
     // StoreModule.forRoot([reducer]),
-    StoreModule.forRoot({reducer}),
+    StoreModule.forRoot({photosReducer}),
     EffectsModule.forRoot([PhotosEffects]),
     StoreDevtoolsModule.instrument()
   ],

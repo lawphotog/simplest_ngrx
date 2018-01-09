@@ -3,5 +3,7 @@ export interface Photo {
 }
 
 export interface AppState {
-    photos: Photo[];
+    photosReducer: {
+        photos: Photo[];
+    };
 }
