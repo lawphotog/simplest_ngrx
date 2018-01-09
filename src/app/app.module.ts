@@ -20,7 +20,6 @@ import { PhotosComponent } from './photos/photos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // StoreModule.forRoot([reducer]),
     StoreModule.forRoot({photosReducer}),
     EffectsModule.forRoot([PhotosEffects]),
     StoreDevtoolsModule.instrument()

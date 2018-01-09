@@ -15,9 +15,7 @@ export class LoadPhotosAction implements Action {
 export class LoadPhotosSuccessAction implements Action {
     readonly type = PhotosActionTypes.LOAD_PHOTOS_SUCCESS;
 
-    constructor(public payload: Photo[]) {
-        console.log('from action: ' + JSON.stringify(payload));
-     }
+    constructor(public payload: Photo[]) {}
 }
 
 export type Action = LoadPhotosAction | LoadPhotosSuccessAction;

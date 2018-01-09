@@ -9,9 +9,9 @@ export class PhotoService {
     constructor() { }
 
     getPhotos(): Observable<Photo[]> {
-        var photo = [{
+        let photo = [{
             src: 'https://www.planwallpaper.com/static/images/nature_backgrounds_perfect_version_images_7035.jpg'
-        }];        
+        }];
 
         return Observable.of(photo);
     }

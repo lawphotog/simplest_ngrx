@@ -11,8 +11,7 @@ export class PhotosEffects {
         .ofType(fromPhotos.PhotosActionTypes.LOAD_PHOTOS)
         .switchMap(() => this.photoService.getPhotos()
         .map(photos => (new fromPhotos.LoadPhotosSuccessAction(photos)))
-    )
+    );
 
     constructor(private photoService: PhotoService, private actions$: Actions) {}
-
 }
